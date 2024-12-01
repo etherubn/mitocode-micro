@@ -1,0 +1,23 @@
+server:
+  port: ${CUSTOM.SERVER.PORT:9020}
+
+# Mongo Configuration
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB.URL.CONNECTION:mongodb://mitocode:mitocode@localhost:27017/mitocode?authSource=admin}
+
+  # Postgres Configuration
+  jpa:
+    databasePlatform:
+    hibernate:
+      ddl-auto: create
+      show-sql: true
+      properties:
+        hibernate:
+          format_sql: true
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: ${POSTGRESQL.URL.CONNECTION:jdbc:postgresql://localhost:5432/mitocode}
+    username: mitocode
+    password: '{cipher}bd8b6928566a8e66e5255e081bf9a35218fd7e2a42ec0fcb19ff2f2ff87817cd'
