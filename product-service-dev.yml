@@ -19,6 +19,6 @@ spring:
           dialect: org.hibernate.dialect.PostgreSQLDialect
   datasource:
     url: ${POSTGRESQL.URL.CONNECTION:jdbc:postgresql://localhost:5432/mitocode}
-    username: mitodoce
+    username: mitocode
     password: mitocode
-    driver-class-name: org.postgresql.Driver
+
