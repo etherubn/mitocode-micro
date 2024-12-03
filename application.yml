@@ -1,0 +1,6 @@
+eureka:
+  client:
+    fetchRegistry: true
+    registryWithEureka: true
+    serviceUrl:
+      defaultZone: ${EUREKA.SERVER.HOST:http://localhost:8761/eureka}
