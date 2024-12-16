@@ -8,3 +8,16 @@ management:
       exposure:
         include: '*'
         base-path: /actuator
+
+#resilencia4j configuration
+resilience4j:
+  circuitbreaker:
+    configs:
+      product-service-circuit-breaker:
+        slidingWindowSize: 15
+        failureRateThreshold: 20
+        waitDurationInOpenState: 20
+        permittedNumberOfCallsInHalfOpenState: 9
+      instances:
+        mitocode-product:
+          base-config: product-service-circuit-breaker
