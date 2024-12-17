@@ -10,7 +10,7 @@ spring:
           predicates:
             - Path=/api/product/v1/** #rutas del microservicio
           filters:
-            - StripPrefix=3 #filtro
+            - StripPrefix=3 #filtro para las plalabras del predicate
         - id: user-service-route
           uri: lb://product-service
           predicates:
