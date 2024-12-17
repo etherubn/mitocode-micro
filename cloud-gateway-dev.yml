@@ -5,15 +5,15 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: product-service-route
-          uri: lb://product-service
+        - id: product-service-route #Nombre del microservicio
+          uri: lb://product-service #lb: para hacer balanceo, uri
           predicates:
-            -Path=/api/product/v1/**
+            - Path=/api/product/v1/** #rutas del microservicio
           filters:
-            -StripPrefix=3
+            - StripPrefix=3 #filtro
         - id: user-service-route
           uri: lb://product-service
           predicates:
-            -Path=/api/user/v1/**
+            - Path=/api/user/v1/**
           filters:
-            -StripPrefix=3
+            - StripPrefix=3
