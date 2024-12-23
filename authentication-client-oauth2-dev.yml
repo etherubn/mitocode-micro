@@ -1,2 +1,11 @@
 server:
   port: ${CUSTOM.SERVER.PORT:9099}
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: Ov23li284rzBlAXezmYo
+            client-secret: 68d543765ba92e4bbc6c0e437cf66cf75ee42ac7
