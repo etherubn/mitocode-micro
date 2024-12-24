@@ -4,6 +4,10 @@ server:
 spring:
   cloud:
     gateway:
+      globalcors:
+        corsConfiguration:
+          '[/**]':
+            allowedOrigins: "http://localhost:300"
       routes:
         - id: product-service-route #Nombre del microservicio
           uri: lb://product-service #lb: para hacer balanceo, uri
