@@ -13,6 +13,6 @@ spring:
             provider: mitocode-realm
             client-name: Mitocode Client Keycloak
             client-id: mitocode-client
-            client.secret: NrfRNevIyHk3y5bmC4zRSxOhJGBmmPCd
+            client-secret: NfTOXfJC2uXBoDRhLTcAiBROXKRDVU3N
             scope: openid
             authorization-grant-type: authorization_code
