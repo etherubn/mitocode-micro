@@ -8,6 +8,9 @@ spring:
         corsConfigurations:
           '[/**]':
             allowedOrigins: "http://localhost:300"
+            allowedMethods:
+              - POST
+              - GET
       routes:
         - id: product-service-route #Nombre del microservicio
           uri: lb://product-service #lb: para hacer balanceo, uri
@@ -21,3 +24,7 @@ spring:
             - Path=/api/user/v1/**
           filters:
             - StripPrefix=3
+
+mitocode:
+  security:
+    key: 6324837009e15dae3f11d515423ee4c87d5942c82767b118a86fc1e5eb3d21b1293ed6e3680dda8ea3d80224638d30e4a8373f796a4d2f0133cafc989a7f5dd8834ee8defb1e76bce6ff02f9e041606b7b569004127add844b1f17db5f60492c
