@@ -14,10 +14,10 @@ resilience4j:
   circuitbreaker:
     configs:
       product-service-circuit-breaker:
-        slidingWindowSize: 15
-        failureRateThreshold: 20
-        waitDurationInOpenState: 20
-        permittedNumberOfCallsInHalfOpenState: 9
+        slidingWindowSize: 15 #Cuabntas peticiones se van a analizar
+        failureRateThreshold: 20 # porcentaje de peticione malas
+        waitDurationInOpenState: 20 #tiempo que va a estar en circuito abierto
+        permittedNumberOfCallsInHalfOpenState: 9 # van a analizar 9 en semiabierto
       instances:
         mitocode-product:
           base-config: product-service-circuit-breaker
